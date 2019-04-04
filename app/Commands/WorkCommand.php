@@ -33,7 +33,7 @@ class WorkCommand extends Command
     {
 		for($x = 0; $x < ($this->argument('count') * 1); $x++)
 		{
-			sleep($this->argument('fuzz') * 1);
+			sleep(rand(0, $this->argument('fuzz') * 1));
 
 			$this->line(\Carbon\Carbon::now()->format('Y-m-d H:i:s T') . ': Starting work...');
 
